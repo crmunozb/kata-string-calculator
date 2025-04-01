@@ -5,6 +5,8 @@ def sumar(cadena):
     
     # Usamos split(",") para separar 
     # Ej: "4,5,6" seria ['4', '5', '6']
+    
+    cadena = cadena.replace("\n", ",")  # Reemplaza saltos de línea por comas
     partes = cadena.split(",")
     
     # Usamos map(int, ...) para convertir cada parte a entero

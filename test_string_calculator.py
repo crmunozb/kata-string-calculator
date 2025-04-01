@@ -14,6 +14,9 @@ class TestStringCalculator(unittest.TestCase): #Clase que contiene los test para
         resultado = sumar ("4,5,6") # Debe sumar los numeros 4,5 y 6 
         self.assertEqual(resultado, 15) #Verificamos que el valor de la suma sea 15
 
-
+    def test_soporta_saltos_de_linea(self):
+        resultado = sumar("1\n2,3")  # Usa salto de línea \n y la coma "," como separadores
+        self.assertEqual(resultado, 6)  # 1 + 2 + 3
+   
 if __name__ == '__main__': # Permite correr los test directamente al ejecutar este archivo
     unittest.main()
