@@ -17,6 +17,11 @@ class TestStringCalculator(unittest.TestCase): #Clase que contiene los test para
     def test_soporta_saltos_de_linea(self):
         resultado = sumar("1\n2,3")  # Usa salto de línea \n y la coma "," como separadores
         self.assertEqual(resultado, 6)  # 1 + 2 + 3
+
+    def test_no_se_permiten_numeros_negativos(self): # Si se incluye un número negativo, debe lanzar ValueError
+        with self.assertRaises(ValueError): # con "With self.assertRaises (..)" le dice a python que esperamos recibir un error. Si no lanza el error, el test falla
+            sumar("-1,-2,3")
+
    
 if __name__ == '__main__': # Permite correr los test directamente al ejecutar este archivo
     unittest.main()

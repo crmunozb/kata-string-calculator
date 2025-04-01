@@ -1,16 +1,22 @@
 def sumar(cadena):
-    # Si la cadena está vacía, no hay números para sumar y retorna 0
+    # Si no hay nada en la cadena, retornamos 0
     if cadena == "":
         return 0
-    
-    # Usamos split(",") para separar 
-    # Ej: "4,5,6" seria ['4', '5', '6']
-    
-    cadena = cadena.replace("\n", ",")  # Reemplaza saltos de línea por comas
+
+    # Cambiamos los saltos de línea por comas
+    cadena = cadena.replace("\n", ",")
+
+    # Partimos la cadena usando la coma como separador
     partes = cadena.split(",")
-    
-    # Usamos map(int, ...) para convertir cada parte a entero
-    # Ej: ['4', '5', '6'] -> [4, 5, 6]
-    numeros = map(int, partes)
-    # Sumamos todos los números y retornamos el resultado
+
+    # Convertimos todas las partes a enteros
+    numeros = list(map(int, partes))
+
+    # Revisamos si hay algún número negativo
+    negativos = [n for n in numeros if n < 0]
+    if negativos:
+        # Si hay negativos, lanzamos error porque no están permitidos
+        raise ValueError("No se permiten números negativos")
+
+    # Si todo bien, devolvemos la suma
     return sum(numeros)
