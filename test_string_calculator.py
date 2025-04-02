@@ -22,6 +22,10 @@ class TestStringCalculator(unittest.TestCase): #Clase que contiene los test para
         with self.assertRaises(ValueError): # con "With self.assertRaises (..)" le dice a python que esperamos recibir un error. Si no lanza el error, el test falla
             sumar("-1,-2,3")
 
-   
+    def test_ignorar_numeros_mayores_a_1000(self):
+        #Ej: Si esta el numero 1001 , este será ignorado
+         resultado = sumar("2,1001")
+         self.assertEqual(resultado,2)
+
 if __name__ == '__main__': # Permite correr los test directamente al ejecutar este archivo
     unittest.main()

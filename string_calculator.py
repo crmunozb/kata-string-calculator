@@ -17,6 +17,8 @@ def sumar(cadena):
     if negativos:
         # Si hay negativos, lanzamos error porque no están permitidos
         raise ValueError("No se permiten números negativos")
+    
+    numeros_filtrados = [n for n in numeros if n <= 1000] #Se ignoraran numeros mayores a 1000
 
     # Si todo bien, devolvemos la suma
-    return sum(numeros)
+    return sum(numeros_filtrados)
