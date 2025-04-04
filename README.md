@@ -1,6 +1,6 @@
 # 🧪 Kata: String Calculator (Python + TDD)
 
-Este proyecto es una implementación de la Kata String Calculator utilizando Python y el enfoque de Desarrollo Guiado por Pruebas (TDD). La idea principal es ir construyendo la lógica a medida que se agregan tests unitarios que guían el desarrollo.
+Este proyecto es una implementación de la [Kata String Calculator](https://kata-log.rocks/string-calculator-kata) utilizando Python y el enfoque de Desarrollo Guiado por Pruebas (TDD). La idea principal es ir construyendo la lógica a medida que se agregan tests unitarios que guían el desarrollo.
 
 ---
 
@@ -13,6 +13,8 @@ Este proyecto es una implementación de la Kata String Calculator utilizando Pyt
 - ✅ Lanzar un error si hay números negativos.
 - ✅ Ignorar números mayores a 1000.
 - ✅ Soportar delimitador personalizado (ej: `//;\n1;2` usa `;` como separador).
+- ✅ Soportar delimitadores largos personalizados (ej: `//[***]\n1***2***3`).
+- ✅ Soportar múltiples delimitadores (ej: `//[*][%]\n1*2%3`).
 
 ---
 
